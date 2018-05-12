@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+    <title>MCD y MCD</title>
+    
+    </head>
+    
+    <body>
+
+      <script type="text/javascript">
+  
+          
+          var error=0;
+          
+          
+          
+          while(error != 1){
+         var num1 = prompt("Digite el primer valor")
+          var num2 = prompt("Digite el segundo valor")
+              
+              
+                if (num1 % 2 ==0 && num2 % 2 == 0){
+                    error++;
+                    
+          var mcd = 0
+          var min;
+          var i = 0;
+          
+          if(num1 < num2){
+          min = num1;
+          }else{
+          min = num2;
+          }  
+
+        for(i=2;i<=min;i++){
+        if(num1 % i == 0 && num2 % i == 0){
+           mcd = i;
+             }
+            }
+          
+          
+          
+       alert("El maximo comun divisor de " + num1 +" y " + num2 + " es: " + mcd)
+       alert("El minimo comun divisor de " + num1 +" y " + num2 + " es: 2")
+                    
+                    
+                    
+                    }else{
+                        alert("Erro! digite sólo numeros pares")
+                        eror = 0
+                    }
+      
+          
+          
+
+                
+                
+                
+                }
+          
+          
+         
+          
+        </script>
+        
+    </body>
+</html>

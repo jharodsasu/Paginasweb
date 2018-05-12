@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+    <title>entradas</title>
+    
+    </head>
+    
+    <body>
+
+      <script type="text/javascript">
+          
+  
+          var nombre = prompt("Digite el nombre")
+           var edad = prompt("Digite la edad")
+            var cedula = prompt("Digite el numero de cedula")
+             var entradas = prompt("Digite la cantidad de entradas")
+             
+             
+             var total = calculo(entradas)
+             alert("El total es de: "+ total )
+                 var paga = parseInt(prompt("Digite con cuanto desea pagar "))
+             
+                 alert( "Su vuelto es de "+ (paga-total))
+          
+           document.write("********************************************<br/>")
+           document.write(nombre+ "<br/>" )
+           document.write(edad+" años <br/>" )
+           document.write("numero de cedula "+cedula+ "<br/>" )
+           document.write("cantidad de entradas "+entradas + "<br/>" )
+           document.write("Total: "+total +"<br/>" )
+           document.write("Paga con: "+paga+ "<br/>")
+           document.write("Vuelto: "+(paga-total) + "<br/>" )
+           document.write("********************************************")
+                 
+                 
+             
+             
+             function calculo(a){
+                 a = 2500*a
+                 return a;
+             }
+          
+          
+          
+        </script>
+    </body>
+</html>

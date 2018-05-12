@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+    <title>Arreglos</title>
+    
+    </head>
+    
+    <body>
+
+      <script type="text/javascript">
+          
+          var cadena = prompt("Digite una cadena de carácteres")
+          var vocalMayuscula=  "AEIOU";
+          var vocalminusculas = vocalMayuscula.toLowerCase()
+          var contador=0;
+         
+          var i=0
+          var j=0
+          
+          for(i=0;i<cadena.length;i++){             
+              for(j=0;j<vocalMayuscula.length;j++){
+                  
+                                
+              if(cadena.charAt(i) == vocalMayuscula.charAt(j) ){
+                 
+                 contador += 1
+                 }
+                 }
+              }
+          
+           for(i=0;i<cadena.length;i++){             
+              for(j=0;j<vocalMayuscula.length;j++){             
+              if(cadena.charAt(i) == vocalminusculas.charAt(j) ){
+                 
+                 contador += 1
+                 }
+                 }
+              }
+              
+          
+                        document.write("Hay "+ contador + " vocales")
+
+          
+          
+          
+        </script>
+    </body>
+</html>

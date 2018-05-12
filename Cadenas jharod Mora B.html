@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+    <title>Arreglos</title>
+    
+    </head>
+    
+    <body>
+
+      <script type="text/javascript">
+        
+          var cadena = prompt("Digite una cadena de carácteres")
+          var Mayuscula=  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          var minusculas = Mayuscula.toLowerCase()
+          var up=0
+          var low=0
+          var i=0
+          var j=0
+          
+          for(i=0;i<cadena.length;i++){             
+              for(j=0;j<Mayuscula.length;j++){
+                  
+                                
+              if(cadena.charAt(i) == Mayuscula.charAt(j) ){
+                 
+                 up += 1
+                 }
+                 }
+              }
+          
+           for(i=0;i<cadena.length;i++){             
+              for(j=0;j<Mayuscula.length;j++){             
+              if(cadena.charAt(i) == minusculas.charAt(j) ){
+                 
+                 low += 1
+                 }
+                 }
+              }
+              
+          
+                        document.write("Hay "+ up+ " letras en mayúscula")
+          document.write("<br/>");
+           document.write("Hay "+ low + " letras en minúscula")
+          
+        
+          
+         
+          
+          
+        </script>
+    </body>
+</html>

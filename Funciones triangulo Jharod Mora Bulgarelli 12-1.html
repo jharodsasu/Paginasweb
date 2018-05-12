@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+    <title>Arreglos</title>
+    
+    </head>
+    
+    <body>
+
+      <script type="text/javascript">
+          
+          alert("A continuación le diremos si su riangulo es equilatero, Isosceles o escaleno")
+        var lado1 = prompt("Digite un lado del triangulo")
+        var lado2 = prompt("Digite otro lado del triangulo")
+        var lado3 = prompt("Digite el ultimo lado del triangulo")
+        
+        validar(lado1,lado2,lado3);
+          
+          
+          
+          function validar(a,b,c){
+              
+              if(a==b && a==c && b==c){
+                  
+                  alert("Su triangulo es Equilatero")
+                  
+              }else{
+                  
+              if(a==b && c!=b && c!=a||  b==c && a!=c && a!=b ||a==c && b!=a && b!=c  ){
+                 alert("Su triangulo es Isosceles")
+                 }else{
+                     
+                     alert("Su triangulo es escaleno")
+                 }
+                  
+                  
+              }
+             
+              
+          }
+          
+          
+          
+        </script>
+    </body>
+</html>

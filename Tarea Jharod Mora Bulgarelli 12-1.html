@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+        <meta charset="utf-8">
+    <title>Tarea</title>
+    
+    </head>
+    
+    <body>
+
+      <script type="text/javascript">
+          
+          var arreglo = [ ]
+          var i = 0
+          var vocalmayus = "AEIOU" 
+          var vocalminus = "aeiou"
+          var palabravocal = []
+          
+          
+   for(i=0;i < 4 ;i++){
+       
+       arreglo.push(prompt("Digite una palabra"))
+   }
+          
+          
+    for(i=0;i < arreglo.length;i++){             
+              for(j=0;j<vocalmayus.length;j++){
+                  
+                  
+                  var temp = arreglo[i]
+                  var temp1 = temp.substring(0,1);               
+                 
+                  if(temp1 == vocalmayus.charAt(j) || temp1 == vocalminus.charAt(j) ){  
+                      
+                      palabravocal.push(arreglo[i])
+                     }
+                 }
+              }
+          
+
+
+          
+          for(i=0;i<palabravocal.length;i++){
+              document.write(palabravocal[i] + "<br/>" )
+          }
+          
+
+          
+          
+          
+          
+        </script>
+    </body>
+</html>

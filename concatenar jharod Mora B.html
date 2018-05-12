@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+    <title>concatenar</title>
+    
+    </head>
+    
+    <body>
+
+      <script type="text/javascript">
+          
+          
+  var palabra1= prompt("Digite una palabra")
+  var palabra2= prompt("Digite otra palabra")
+  var palabra3= prompt("Digite una ultima palabra")
+  var concatenado = palabra1+" "+palabra2+" "+palabra3
+  document.write("Su pababra es : "+ "´" + concatenado+"´"+ "\n")
+           document.write("<br/>")
+          
+          
+var indice = prompt("Digie la letra que quieres averiguar dónde se encuentra ")
+
+document.write(indice + " se encuentra en el índice " 
+               +concatenado.indexOf(indice))
+           document.write("<br/>")
+          var indiceborrado1 = prompt("Digite el indice de inicio donde deseas borrar")
+           var indiceborrado2 = prompt("Digite el indice de fin donde deseas borrar")
+          
+           var borrado = concatenado.substring(indiceborrado1,indiceborrado2)
+          
+          document.write("<br/>")
+          document.write("Su palabra final es : "+ borrado)
+          
+          
+          
+          
+        </script>
+    </body>
+</html>
