@@ -1,0 +1,314 @@
+﻿
+<html>
+
+<link rel="icon" type="image/png" href="images\SmartBLogo.PNG" />
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Smart B</title>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+<div id="wrapper">
+
+	<div id="top" class="clear">
+		<h1><a href="#"><img src="images\SmartBLogo.PNG"></a></h1>
+		
+		<ul>
+			<li><a href="index.html">home</a></li>
+			<li><a href="Servicios.html">Servicios</a></li>
+			<li class="selected"><a href="Pagos.html">Pagos</a></li>
+			<li><a href="Ayuda.html">Ayuda</a></li>
+		</ul>     
+	</div>
+   <br/>
+   <br/>
+   <marquee loop=”10000000000000000″> Aviso! hemos decidido aplicar una oferta de acuerdo a las horas de consumo
+mensuales. Si las horas de consumo son menores o iguales a 168 se obtiene un descuento del 10%, si las horas son mayores a 168 y menores o iguales a 360 se obtiene un descuento de 15% y si son mayores a 360 se aplica un descuento de 20%. Por ley, las empresas nacionales deben pagar un 13% de impuesto de venta y las internacionales un 15%.</marquee>
+
+	
+	
+			<fieldset>
+<br/>
+            <br/>
+				
+				<form action="#" method="get">
+					<p><label for="name">Nombre: </label>
+
+					<input type="text" name="name" id="name" value="" /><br /></p>
+
+	
+					<p><label for="cedula">Cedula juridica: </label>
+	
+					<input type="text" name="cedula" id="cedula" value="" /><br /></p>
+
+					<p><label for="TCliente">tipo de cliente (N o I):</label>
+                    <input type="text" name="TCliente" id="TCliente" value="" /><br /></p>
+                    
+                    <p><label for="TServicio">Tipo de servicio: (1, 2 o 3) </label>
+	
+					<input type="text" name="TServicio" id="TServicio" value="" /><br /></p>
+					
+					<p><label for="HConsumo">Horas de consumo mensuales: </label>
+
+					<input type="text" name="HConsumo" id="HConsumo" value="" /><br /></p>
+					
+					
+					
+					<button onclick="Pagar()"/>Pagar<button/>
+					
+					
+					
+					 <script type="text/javascript">
+                         
+                         
+                         
+                         
+                  
+                         function Pagar(){
+                             
+                             
+                        var nombre = document.getElementById("name").value;
+                        var cedula = document.getElementById("cedula").value;
+                        var tipocliente = document.getElementById("TCliente").value;
+                        var tiposervicio = document.getElementById("TServicio").value;
+                        var horasconsumo = document.getElementById("HConsumo").value;
+                        var numeros = "0123456789"
+                        var letrasmayus = "ABCDEFGHIJKLMNOPQRSTUVWZX"
+                        var letrasminus = letrasmayus.toLowerCase()
+                        var i
+                        var j
+                        var conttemp=0              
+                        var conttemp1=0
+                        var conttemp2=0
+                        var conttemp3=0
+                        var conttemp4=0
+                                                                          
+
+                        
+        for(i=0;i<nombre.length;i++){
+        for(j=0;j<numeros.length;j++){
+            if(nombre.charAt(i)==numeros.charAt(j)){
+               conttemp++
+               }
+            
+        }      
+        } 
+                    if(nombre== ""){
+               conttemp++
+               }         
+                         
+        for(i=0;i<cedula.length;i++){
+        for(j=0;j<letrasmayus.length;j++){
+            if(cedula.charAt(i)==letrasmayus.charAt(j) || cedula.charAt(i)==letrasminus.charAt(j) ){
+               conttemp1++
+               }
+            
+        }      
+        }
+              if(cedula== "" || cedula.length > 17 ){
+               conttemp1++
+               }   
+                             
+            if(tipocliente.toUpperCase() != "N" && tipocliente.toUpperCase() != "I"  ){
+               conttemp2++
+               }
+            
+      
+            if(tiposervicio != "1" && tiposervicio != "2" && tiposervicio != "3" ){
+               conttemp3++
+               }
+                   
+         for(i=0;i<horasconsumo.length;i++){
+        for(j=0;j<letrasmayus.length;j++){
+            if(horasconsumo.charAt(i)==letrasmayus.charAt(j) || horasconsumo.charAt(i)==letrasminus.charAt(j) ){
+               conttemp4++
+               }
+      
+        }      
+        }   
+               if(horasconsumo == ""){
+               conttemp4++
+               }   
+            
+                           if (conttemp >= 1 ){    
+                                 alert("Por favor digite un nombre valido") 
+                            }
+                            if (conttemp1 >= 1 ){   
+                                 alert("Por favor digite una cedula juridica valida")   
+                            }
+                            if (conttemp2 >= 1 ){  
+                                 alert("Por favor digite un tipo de cliente valido") 
+                            }
+                            if (conttemp3 >= 1 ){
+                                 alert("Por favor digite un tipo de servicio valido")
+                            }
+                            if (conttemp4 >= 1 ){
+                                 alert("Por favor digite las horas de consumo correctamente (Solo numeros)")
+                            }
+                             
+                             
+                            if(conttemp1 >=1 || conttemp2 >=1 || conttemp3 >=1 || conttemp4 >=1 ){
+                               
+                               alert("Complete los campos correctamente para continuar")
+                               }else{
+                                   
+                                   
+                                   var totalBase = costoBase(horasconsumo, tipocliente, tiposervicio)
+                                   
+                                   var desc = descuentoAplicado(horasconsumo, totalBase)
+                                   
+                                   var imp 
+                                       
+                                   
+                                   if (tipocliente.toUpperCase() == "N" && tiposervicio == 1){
+                                    imp = 13
+                                      var totalpago = montoPago(desc, imp)
+                                    
+                                       alert(nombre + "\n" + "Cedula juridica: " + cedula + "\n" + "Tipo de cliente: Nacional \n" + "Tipos servicio: Instancias bajo demandas \n " + "Horas de consumo: " + horasconsumo + "\n" + "Total a pagar : " +  totalpago)  
+                         } //fin if
+                                    if (tipocliente.toUpperCase() == "N" && tiposervicio == 2){
+                                    imp = 13
+                                      var totalpago = montoPago(desc, imp)
+                                    
+                                       alert(nombre + "\n" + "Cedula juridica: " + cedula + "\n" + "Tipo de cliente: Nacional \n" + "Tipos servicio: Instancias reservadas \n " + "Horas de consumo: " + horasconsumo + "\n" + "Total a pagar : " +  totalpago)  
+                         } //fin if
+                                    if (tipocliente.toUpperCase() == "N" && tiposervicio == 3){
+                                    imp = 13
+                                      var totalpago = montoPago(desc, imp)
+                                    
+                                       alert(nombre + "\n" + "Cedula juridica: " + cedula + "\n" + "Tipo de cliente: Nacional \n" + "Tipos servicio: Instancias puntuales \n " + "Horas de consumo: " + horasconsumo + "\n" + "Total a pagar : " +  totalpago)  
+                         } //fin if
+                                   
+                                           
+                                   if (tipocliente.toUpperCase() == "I" && tiposervicio == 1){
+                                    imp = 15
+                                      var totalpago = montoPago(desc, imp)
+                                    
+                                       alert(nombre + "\n" + "Cedula juridica: " + cedula + "\n" + "Tipo de cliente: Nacional \n" + "Tipos servicio: Instancias bajo demandas \n " + "Horas de consumo: " + horasconsumo + "\n" + "Total a pagar : " +  totalpago)  
+                         } //fin if
+                                    if (tipocliente.toUpperCase() == "I" && tiposervicio == 2){
+                                    imp = 15
+                                      var totalpago = montoPago(desc, imp)
+                                    
+                                       alert(nombre + "\n" + "Cedula juridica: " + cedula + "\n" + "Tipo de cliente: Nacional \n" + "Tipos servicio: Instancias reservadas \n " + "Horas de consumo: " + horasconsumo + "\n" + "Total a pagar : " +  totalpago)  
+                         } //fin if
+                                    if (tipocliente.toUpperCase() == "I" && tiposervicio == 3){
+                                    imp = 15
+                                      var totalpago = montoPago(desc, imp)
+                                    
+                                       alert(nombre + "\n" + "Cedula juridica: " + cedula + "\n" + "Tipo de cliente: Nacional \n" + "Tipos servicio: Instancias puntuales \n " + "Horas de consumo: " + horasconsumo + "\n" + "Total a pagar : " +  totalpago)  
+                         } //fin if
+                                   
+                                            
+                                       }//fin if
+                                   
+                                   
+                                       
+                                       
+                                       }//fin else
+                                   
+                                   
+                                  
+                                   
+                                   
+                               
+                
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                         
+                         
+                                 
+                         
+                         function costoBase(hora,tcliente,tservicio){                                  var totalBase =0         
+                        if(tcliente.toUpperCase() == "N" && tservicio == "1" ){
+                          totalBase = hora * 2.75
+                           }
+                             if(tcliente.toUpperCase() == "N" && tservicio == "2" ){
+                           totalBase = hora * 4.50
+                           }
+                              if(tcliente.toUpperCase() == "N" && tservicio == "3" ){
+                           totalBase = hora * 3
+                           }
+                              if(tcliente.toUpperCase() == "I" && tservicio == "1" ){
+                           totalBase = hora * 3.75
+                           }
+                              if(tcliente.toUpperCase() == "I" && tservicio == "2" ){
+                           totalBase = hora * 6
+                           }
+                              if(tcliente.toUpperCase() == "I" && tservicio == "3" ){
+                           totalBase = hora * 4.25
+                           }
+                             
+                             
+                             
+                             
+                             
+                             
+                             return(totalBase)
+                         }                                              
+                         function descuentoAplicado(horas, totalBase){
+                             var temp=0
+                             if(horas <= 168 ){
+                                 temp = (10/100) * totalBase 
+                                 totalBase -= temp
+                                }
+                             if(horas > 168 && horas <= 360){
+                                temp = (15/100) * totalBase 
+                                 totalBase -= temp
+                                }
+                             if(horas > 360){
+                                 temp = (20/100) * totalBase 
+                                totalBase -= temp
+                                }
+                             
+                             return(totalBase)
+                             
+                         }
+                           
+                         function montoPago(totalBase,imp){
+                             imp = imp/100
+                             var temp = totalBase * imp
+                             totalBase += temp
+                             
+                             return(totalBase)
+                             
+                         }
+                         
+                        </script>
+					
+					
+					
+						
+				</form>
+
+			</fieldset>
+
+			<p>&nbsp;</p>		
+		
+		</div>
+	</div>
+	
+		</div>
+	</div>
+	
+	
+		<div class="footer-box">
+			
+	<div id="footer-links">
+		<p>
+			&copy; 2018 Smart B </a> by Jharodsasu
+		</p>
+		
+		
+		
+		
+
+	</div>
+	</div>
+</body>
+</html>

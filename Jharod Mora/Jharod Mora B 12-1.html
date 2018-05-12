@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+ 
+    
+<head>
+        <meta charset="utf-8">
+    <title>Ciclos</title>
+    
+    </head>
+    
+    <body>
+
+      <script type="text/javascript">
+          
+         /* var nombre = "juan";
+          var edad = 18;
+          
+          if ( edad == 18 ){
+              alert(nombre + " eres mayor ");
+              document.write(nombre + "  " + "eres mayor")
+              
+          }else{
+              document.write(nombre + "Eres menor")
+          }
+              
+          var i =0; 
+          for (i=0; i<=10;i++){
+              
+              if(i==3){
+                  break
+              }else{
+                  document.write(" El numero es " + i );
+                  document.write("<br/>")
+              }
+              
+          }
+          
+          var opcion = ""
+          var num1
+          var num2
+          var total=0
+          var x
+          var y
+    
+       opcion = prompt("->Digite 1 para suma "+ "\n"+ "->Digite 2 para resta "+"\n"+ "->Digite 3 para multiplicacion "+ "\n"+ "->Digite 4 para division ")
+        
+        if(opcion == 1){
+         var x = prompt("Enter a Value", "0", x)
+         var y = prompt("Enter a Value", "0",y )
+         
+          total = parseInt(x) + parseInt(y);
+           document.write("La suma de "+ x +" y "+ y + " es de "+ total);
+           
+           }
+          
+           if(opcion == 2){
+          var x = prompt("Enter a Value", "0", x)
+         var y = prompt("Enter a Value", "0",y )
+         
+          total = parseInt(x) - parseInt(y);
+           document.write("La resta de "+ x +" y "+ y + " es de "+ total);
+           
+           
+           }
+          
+           if(opcion == 3){
+           var x = prompt("Enter a Value", "0", x)
+         var y = prompt("Enter a Value", "0",y )
+         
+          total = parseInt(x) * parseInt(y);
+           document.write("La muliplicacion de "+ x +" y "+ y + " es de "+ total);
+           
+           }
+          
+           if(opcion == 4){
+         var x = prompt("Enter a Value", "0", x)
+         var y = prompt("Enter a Value", "0",y )
+         
+          total = parseInt(x) / parseInt(y);
+           document.write("La divicion de "+ x +" entre "+ y + " es de "+ total);
+
+           }
+    
+          var mes
+          
+          mes = parseInt(prompt("Digite el numero del mes"));
+          
+          
+          
+          switch(mes){
+                 
+                 
+              case 1:
+                 document.write("El mes 1 es Enero");
+                 break;
+              case 2:
+                   document.write("El mes 2 es Febrero");
+                 break;
+                 case 3:
+                   document.write("El mes 3 es marzo");
+                 break;
+                 case 4:
+                   document.write("El mes 4 es abril");
+                 break;
+                 case 5:
+                   document.write("El mes 5 es mayo");
+                 break;
+                 case 6:
+                   document.write("El mes 6 es junio");
+                 break;
+                 case 7:
+                   document.write("El mes 7 es julio");
+                 break;
+                 case 8:
+                   document.write("El mes 8 es agosto");
+                 break;
+                 case 9:
+                   document.write("El mes 9 es septiembre");
+                 break;
+                 case 10:
+                   document.write("El mes 10 es octubre");
+                 break;
+                 case 11:
+                   document.write("El mes 11 es noviembre");
+                 break;
+                 case 12:
+                   document.write("El mes 12 es diciembre");
+                 break;
+                 }
+          
+          
+          var cantidadPar=0
+          var cantidadImpar=0
+          
+          var i =0
+          document.write("Numeros pares"+ "<br/>")
+          for (i=0;i<=50;i++){
+              if(i % 2 == 0){
+                  document.write(i+ " es numero par"+ "<br/>")
+                  cantidadPar= cantidadPar + 1
+                 }else{
+                       
+                 }
+       
+              
+          }
+          
+           document.write("Hay "+ cantidadPar +" numeros pares"+ "<br/>");
+           document.write("Numeros Impares"+ "<br/>");
+            for (i=0;i<=50;i++){
+              if(i % 2 != 0){
+                   document.write(i+" es numero impar"+ "<br/>");
+                       cantidadImpar = cantidadImpar + 1
+                 }else{
+               
+                 }  
+          }
+          
+         
+            document.write("Hay "+cantidadImpar+ " numeros impares");
+          */
+          var b
+          var arreglo =["Jharod", "Jack","Priscila","Jose","Kenneth"]
+          
+          document.write("El arreglo es de: "+ arreglo.length+ "<br/>");
+          
+           
+           for(i=0;i<= arreglo.length-1;i++){
+              document.write(arreglo[i]+ " ") 
+          }
+          document.write("<br/>"+"<br/>"+ "Ahora se añadirán 3 más "+ "<br/>")
+      
+          arreglo.push("Andrés")
+           arreglo.push("Juan")
+           arreglo.push("Pedro")
+            b =  arreglo.join("-");
+          
+          var i=0
+          for(i=0;i<= b.length-1;i++){
+              document.write(b[i]) 
+          }
+          document.write("<br/>"+"<br/>"+ "Ahora se ordenarán los nombres alfabeticamente "+ "<br/>")
+          
+          var orden = arreglo.sort();
+                    var i=0
+          for(i=0;i<= orden.length-1;i++){
+              document.write(orden[i]+ "<br/>") 
+          }
+          document.write("<br/>"+ "Ahora el arreglo es de: "+ arreglo.length);
+          
+    
+          
+        
+         
+          
+          
+        </script>
+    </body>
+
+
+
+</html>

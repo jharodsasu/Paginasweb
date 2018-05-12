@@ -1,0 +1,136 @@
+ <!DOCTYPE html>
+   <html>
+    
+   
+<head>
+      <link rel="icon" type="image/png" href="images\calculadoraicon.ico" />
+       
+        <link rel="stylesheet" type="text/css" href="Style.css" />
+        <meta charset="utf-8">
+    <title>Calculadora pulpera</title>
+   
+    </head>
+    <body>
+     
+     <form action="#" method="get" id = "form1">
+         
+         
+         
+         <div class = "wrapper">
+                <h1>Bienvenido a la calculadora pulpera</h1>
+             	<input type="text" name="Resul" id="Resul" value="" />
+             	 <br/> 
+             	   <br/>     
+             	  <input type="button" value = "CE"  onclick = CE() /> 
+             	  <input type="button" value = "C" onclick = C() /> 
+             	  <input type="button" value = "Del"  onclick = Del() />                   
+                <input type="button" value = "-"  onclick = resta() /> 
+                <br/>         
+               <input type="button" value = "7" onclick =numero("7") /> 
+                 <input type="button" value = "8"  onclick = numero("8") />    
+                   <input type="button" value = "9" onclick =numero("9") />  
+                       <input type="button" value = "*" onclick = multi() /> 
+                    
+                       <br/>          
+                     <input type="button" value = "4" onclick = numero("4") />    
+                       <input type="button" value = "5" onclick = numero("5") />    
+                         <input type="button" value = "6"  onclick = numero("6") /> 
+                           <input type="button" value = "/" onclick = divi() />   
+                           <br/>      
+                           <input type="button" value = "1" onclick = numero("1") />    
+                             <input type="button" value = "2" onclick = numero("2") />    
+                               <input type="button" value = "3"  onclick =numero("3") /> 
+                                  <input type="button" value = "+" onclick = suma() /> 
+                                 <br/>        
+                                 <input type="button" value = "0" id = "cero" class="cero" onclick = numero("0") />   
+                                   <input type="button" value = "." onclick = numero(".") />  
+                                     <input type="button" value = "=" onclick =igual() />          
+            </div>
+                   <script type="text/javascript">
+                       var num;        
+                       var aux;
+                       
+                       function numero(a){
+                       
+                       form1.Resul.value += a
+                       
+                   }   
+                      
+                       
+                       function suma(){
+                       
+                    num1 = document.getElementById("Resul").value;
+                       aux = "+"
+                           C()
+                           
+                   }   
+                       function resta(){
+                       
+                       num1 = document.getElementById("Resul").value;
+                            aux ="-" 
+                           C()
+                       
+                   }   
+                       function multi(){
+                       
+                        num1 = document.getElementById("Resul").value;
+                            aux ="*"
+                           C()
+                       
+                   }   
+                       function divi(){
+                       
+                        num1 = document.getElementById("Resul").value;
+                            aux ="/"
+                       C()
+                   }   
+                       function igual(){
+                     
+                      num2 =parseInt(document.getElementById("Resul").value) ;
+                           num1 = parseInt(num1)
+                           if(aux == "-"){
+                               var total = num1-num2
+                              }
+                           if(aux == "+"){
+                               var total = num1+num2
+                              }
+                           if(aux == "*"){
+                               var total = num1*num2
+                              }
+                           if(aux == "/"){
+                               var total = num1/num2
+                              }
+                         
+                          
+                         form1.Resul.value = total
+                   }   
+                    
+                       function CE(){
+                       
+                       form1.Resul.value = ""
+                           num1 = 0 ;
+                       
+                   }   
+                       function C(){
+                       
+                       form1.Resul.value = ""
+                       
+                   }   
+                       function Del(){
+                    var aux10 = document.getElementById("Resul").value;
+                           var temp10 = aux10.substring(0, aux10.length-1)
+                              form1.Resul.value = temp10
+                           
+                   }   
+                       
+         </script>
+             
+
+         
+         
+         </form>
+    </body>
+    
+    
+    
+</html>

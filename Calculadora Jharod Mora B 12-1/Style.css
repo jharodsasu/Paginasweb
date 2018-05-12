@@ -1,0 +1,39 @@
+body{
+    background-color: lightslategray;
+    
+}
+
+.wrapper{
+     text-align: center;
+    
+}
+
+input[type=button] {
+    color:skyblue;
+    background-color: black;
+    font:2.4em Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+    width: 3em;  height: 2em;
+    font-size:120%;
+
+
+  
+}
+
+input.cero {
+    width: 6.2em;  height: 2em;
+}
+
+
+h1 {
+    color: deepskyblue;
+    margin-left: 20px;
+}
+
+
+input[type=text] {
+    font:2.4em Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+     color:skyblue;
+     width: 12.4em;  height: 2em;
+     background-color: black;
+    font-size:120%;  
+}

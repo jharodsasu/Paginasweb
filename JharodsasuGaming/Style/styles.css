@@ -1,0 +1,550 @@
+/** global **/
+body {
+	background:#000 url('../images/body_bg.jpg') repeat-x;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color: #555555;
+	margin:0 auto;
+	padding:0;
+}
+* {
+	margin:0;
+	padding:0;
+}
+
+
+/** element defaults **/
+table {
+	width:100%;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-align:left;
+}
+th, td {
+	padding:5px 10px;
+}
+th {
+	color:#555555;
+	border-top:3px solid #FFF;
+	background-color:#FFF;
+}
+td {
+	border-bottom:1px solid #555555;
+}
+code, blockquote {
+	display:block;
+	border-left:5px solid #000;
+	padding:10px;
+	margin-bottom:20px;
+}
+blockquote p {
+	font-style:italic;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	margin:0;
+	height: 1%;
+}
+p {
+	line-height:1.9em;
+	margin-bottom:20px;
+}
+a {
+	color:#666;
+}
+a:hover {
+	color:#FFF;
+}
+a:focus {
+	color:#000;
+	outline:none;
+}
+fieldset {
+	display:block;
+	border:none;
+	border-top:1px solid #e0e0e0;
+}
+fieldset legend {
+	font-weight:bold;
+	font-size:13px;
+	padding-right:10px;
+	color:#222;
+}
+fieldset form {
+	padding-top:15px;
+}
+fieldset p label {
+	float:left;
+	width:150px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+fieldset form input, fieldset form select, fieldset form textarea {
+	padding:5px;
+	color:#333333;
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	border:1px solid #ddd;
+}
+form input.formbutton {
+	margin-left:150px;
+	background:#FFF;
+	border:none;
+	font-family:Arial, Helvetica, sans-serif;
+	border-bottom:3px solid #FFF;
+	color:#ffffff;
+	font-weight:bold;
+	padding:5px 10px;
+	font-size:12px;
+}
+h1 {
+	
+	color:#000;
+	font-family: HUfont;
+	font-size:35px;
+	text-shadow: 2px 2px 2px black;
+
+}
+h2 {
+
+	font-size:45px;
+}
+h3 {
+	color:#666666;
+	font-size:20px;
+	padding-bottom:10px;
+}
+h4 {
+	padding-bottom:10px;
+	font-size:15px;
+	color:#FFF;
+}
+h5 {
+	padding-bottom:10px;
+	font-size:13px;
+	color:#666666;
+}
+ul, ol {
+	margin:0 0 35px 35px;
+}
+li {
+	padding-bottom:5px;
+}
+
+/** wrapper **/
+div#wrapper {
+	width:960px;
+	margin:0 auto;
+	padding:0;
+}
+
+/** sitename+nav **/
+div#top {
+	padding-top:35px;
+	height:100px;
+ font-family: HUfont;
+}
+div#top h1 {
+	float:left;
+	font-size:51px;
+	padding-bottom:15px;
+}
+div#top h1 a {
+	color:#666;
+	font-weight:normal;
+	letter-spacing:-4px;
+	float:left;
+	text-decoration:none;
+}
+div#top ul {
+	float:right;
+	list-style:none;
+	margin:0 25px 0;
+	padding:68px 0 0;
+}
+div#top ul li {
+	float:left;
+	display:block;
+	padding:0;
+}
+div#top ul li a {
+	padding:10px 15px;
+	float:left;
+	color:#000;
+	text-decoration:none;
+	display:block;
+	font-size:12px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+div#top ul li.selected a,
+div#top ul li.selected a:hover {
+	border:none;
+	background-color:#FFF;
+    color:#000;
+	text-decoration:none;
+}
+div#top ul li a:hover {
+	text-decoration:underline;
+}
+
+
+/** body **/
+div#body {
+	background:#FFF;
+		margin-top:25px;
+}
+
+/** content+sidebar styles **/
+div#content {
+	width:675px;
+}
+div#content {
+	font-size:12px;
+}
+div.column-left {
+	float:left;
+	margin-right:20px;
+}
+div.column-right {
+	float:right;
+}
+div#sidebar {
+	width:230px;
+}
+div#sidebar ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+div#sidebar li ul {
+	border-top:1px solid #ddd;
+	margin-bottom:20px;
+}
+div#sidebar li ul li {
+	display:block;
+	padding:7px 15px;
+	border-bottom:1px solid #ddd;
+	color:#777;
+}
+div#sidebar li ul li a {
+	text-decoration:none;
+	font-family:"Trebuchet MS", Verdana, Arial;
+	font-weight:bold;
+}
+div#sidebar li ul li a:hover {
+	text-decoration:underline;
+}
+div#sidebar h4 { 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-transform:uppercase;
+	font-weight:bold;
+	margin:0;
+	padding:7px 10px;
+}
+
+
+/** footer **/
+div#footer {
+	background-color:#222;
+	padding:10px;
+	color:#999;
+}
+div#footer a {
+	color:#999;
+	font-weight:bold;
+	text-decoration:underline;
+}
+div#footer h4 {
+	color:#999;
+	font-size:18px;
+}
+div#footer form {
+	margin:0;
+	padding:0;
+}
+div#footer form input#searchbutton {
+	background-color:#111;
+	border-bottom:none;
+	margin:0;
+}
+div#footer form input#searchquery {
+	background-color:#333;
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	border:none;
+	padding:5px 5px 6px;
+}
+div#footer ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	border-top:1px solid #333;
+}
+div#footer ul li {
+	padding:0;
+}
+div#footer ul li a {
+	text-decoration:none;
+	display:block;
+	padding:7px 10px;
+	border-bottom:1px solid #333;
+}
+div#footer ul li a:hover {
+	background-color:#1f1f1f;
+}
+div.footer-box {
+	width:210px;
+	margin-right:20px;
+	float:right;
+	}
+div.footer-box1{
+	width:400px;
+	margin-right:auto;
+	float:left;
+
+}
+div.end-footer-box {
+	margin-right:0;
+}
+div#footer-links {
+	background-color:#111;
+	color:#ffffff;
+	padding:5px;
+}
+div#footer-links p {
+	text-align:right;
+	padding:0;
+	margin:0;
+	font-size:10px;
+}
+div#footer-links a {
+	color:#fff;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+/** clear **/
+.clear:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clear {
+	display: inline-block;
+}
+.clear {
+	display: block;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #9a9a9a;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #fff;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@font-face {
+    font-family: "HUfont";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("../Fonts/Wollyhood Dead.woff") format("woff"), url("../Fonts/Wollyhood Dead.ttf") format("truetype");
+}
+
+/* menu desplegable */
+#menu{
+
+	 z-index: 1;
+font-family: HUfont;
+}
+
+#menu ul ul {
+ display:none;
+ position:absolute;
+ top:100%;
+ left:0;
+ background:#fff; url('../images/submenu.jpg') ;
+ padding:0;
+}
+
+/* items del menu desplegable */
+
+#menu ul ul li {
+    z-index: 1000;
+ float:none;
+ width:150px
+}
+
+/* enlaces de los items del menu desplegable */
+
+#menu ul ul a {
+
+ line-height:120%;
+ padding:10px 15px;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+#menu ul li:hover > ul {
+ display:block;
+}
+/* menu */
+
+#menu ul {
+
+ list-style:none;
+ margin:0;
+ padding:0;
+}
+
+/* items del menu */
+
+
+
+/* enlaces del menu */
+
+#menu ul a {
+ display:block;
+ color:#fff;
+ text-decoration:none;
+ font-weight:400;
+ font-size:15px;
+ padding:10px;
+ font-family: HUfont;
+ text-transform:uppercase;
+ 
+}
+
+/* items del menu */
+
+#menu ul li {
+ position:relative;
+ float:left;
+ margin:0;
+ padding:0;
+}
+
+
+.Imagenes img {
+ margin-left:100px; 
+ width="500"; 
+ height="300";
+}
+
+.h12{
+
+	background:#fff url('../images/saltoenlapag.jpg') repeat-x;
+}
+.fondopag{
+	background:#000 url('../images/cielo.jpg') repeat;
+}
+footer { 
+    display: block;
+   background:#000 url('../images/saltoenlapag.jpg') repeat-x;
+}
+#juegos {
+	color: #fff;
+    width: 1345;
+    float: left;
+    padding: 20px;
+    background: #1f1f1f;
+	margin: 20px 0px;
+	border-radius: 5px;
+	box-shadow: : 0px 2px 2px #000;
+	font-size: 16px;
+	text-align: justify;
+}
+.cuatrocerocuatro{
+background:#000 url('../images/404.jpg') ;
+
+}
